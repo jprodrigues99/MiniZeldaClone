@@ -1,0 +1,104 @@
+ Artes para o jogo (Sprites)
+ Animaçao para o player
+ Controle atraves do teclado
+ Sistema de tiro
+ Sistema de mapa
+ Vários leveis
+ Inimigos
+ Boss
+ Coleta de itens
+ Aumentar ataque/defese conforme item
+ Sistema de dano
+ Save e Load game
+ Audios e musicas
+ Pause, game over e menu.
+ 
+ 
+ ACRESCENTAR AO JOGO:
+ ANIMAÇAO DE SANGUE QUANDO VIDA DO PLAYER < 10
+ ANIMACAO DE INIMIGO BATENDO NO PLAYER
+ USERINTERFACE, SILHUETA DO JOGADOR MOSTRANDO O QUE ELE ESTA FAZENDO, ANDANDO, COM ARMA, ATIRANDO, 
+ ANIMAO E COMANDO DO PLAYER CORRENDO
+ MELHORAR TODOS OS SPRITES
+ ACRESCENTAR NOVAS ARMAS E ARMAS BRANCAS
+ DESENHAR SOMBRA DO PLAYER E COLOCAR QUANDO ELE ESTIVER PULANDO
+ *DESENHAR DISPARO DA ARMA E COLOCAR QUANDO DER O TIRO - FINALIZADO
+ *FAZER INTEM DE INVENCIBILIDADE POR ALGUNS SEGUNDOS - FINALIZADO
+ COLOCAR OPCAO PARA PEGAR A ARMA, E NAO SOH SE ESTIVER COLIDINDO, APERTE F PARA PEGAR ARMA.
+ ADICIONAR BOSS NO MAPA SOMENTE QUANDO TODOS INIMIGOS MORREREM, NA CLASS WORD, CARREGAR O BOSS SE ENEMIES = 0
+ PARA MUDAR DE FASE DEPOIS DE ADICIONAR O BOSS, TEM QUE MUDAR COMO AVANCA DE FASE, MUDAR DE FASE SOMENTE SE A VIDA DO BOSS = 0;
+ 
+ CRIAR UMA SPRTE DE PORTAO
+ QUANDO INIMIGOS FOREM ZERO, COLOCAR SPRITE DO PORTAO ABERTO
+ QUANDO COLIDIR COM O PORTAO, PASSAR DE FAZE QUE EH O CHEFAO.
+ 
+ NIVEL DE FORCA DOS INIMIGOS
+ 
+ NOME:      VIDA:      VELOCIDADE:      PROBABILIDADE DE PERSEGUICAO:      TEMPO DE PERSEGUICAO:      DISTANCIA PARA PERSEGUIR:      DANO:   
+ MORCEGO -   30            1.0                    < 20                             10s
+ BOLA -      40            1.0                    < 5                              10s
+ DUENDE -    60            1.0                    < 20                             15s
+ ESPIRITO -  80            1.0                    < 15                             10s
+ GOLLEN -    100           1.0                    < 5                              10s
+ CAVEIRA -   120           1.0                    < 15                             10s
+ ESP.MALIG.  150           1.0                    < 40                             20s
+ COBRA -     250           1.0                    < 20                             30s
+ MORCEGAO -  300           1.0                    < 20                             30s
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 	public void followPatheasy(List<Node> path) {
+		if(path != null) {
+			if(path.size() > 0) {
+				Vector2i target = path.get(path.size() - 1).tile;
+			    if(x < target.x * 16 ) {
+			    	x+=.speed;
+			    	.down = false;
+			    	.up = false;
+			    	.right = true;
+			    	.left = false;
+			    }else if(x > target.x * 16 ) {
+			    	x-=.speed;
+			    	.down = false;
+			    	.up = false;
+			    	.right = false;
+			    	.left = true;
+			    }
+			    if(y < target.y * 16) {
+			    	y+=.speed;
+			    	.down = true;
+			    	.up = false;
+			    	.right = false;
+			    	.left = false;
+			    }else if(y > target.y * 16) {
+			    	y-=.speed;
+			    	.down = false;
+			    	.up = true;
+			    	.right = false;
+			    	.left = false;
+			    }
+			    
+			    if(x == target.x * 16 && y == target.y * 16) {
+			    	path.remove(path.size() - 1);
+			    }
+			}
+		}
+	}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
