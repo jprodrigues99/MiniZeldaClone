@@ -19,5 +19,10 @@ Jogo 2D desenvolvido em Java com engine própria.
 - POO (Programação Orientada a Objetos)
 
 ## ▶️ Como executar
-- Importar o projeto no Eclipse
-- Executar a classe principal
+- Baixe a pasta "Executar.zip"
+- Abra o Eclipse IDE
+- Extraia os arquivos da pasta "Executar.zip"
+- No Eclipse IDE, Vá em "File" -> "Open projects from System" -> "DIrectory"
+- Na pasta extraída, seleciona a pasta "JP_Game"
+- Aperte "Finish"
+- Abra a classe "Game" e execute no Eclipse
